@@ -32,7 +32,7 @@ class PropertyListPresenter(interactor: PropertyListInteractor, view: PropertyLi
     }
 
     private fun displayItems(items: List<Property>){
-        view?.fillRecyclerView(PropertyListAdapter(items))
+        view?.fillRecyclerView(items)
     }
 
 }

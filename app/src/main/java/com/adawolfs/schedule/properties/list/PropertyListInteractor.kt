@@ -7,12 +7,22 @@ import com.adawolfs.schedule.properties.containers.Property
  */
 class PropertyListInteractor : MvpContract.Interactor {
 
-    override fun getItems() : List<Property>{
+    override fun getItems() : List<Property> {
+
         val list : MutableList<Property> = mutableListOf()
-        list.add(Property("Opcion 1"))
-        list.add(Property("Opcion 2"))
-        list.add(Property("Opcion 3"))
-        list.add(Property("Opcion 4"))
+
+        list.add(Property(description = "Opcion 1", bedrooms = 2, bathrooms = 1,
+                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
+
+        list.add(Property(description = "Opcion 2", bedrooms = 2, bathrooms = 1,
+                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
+
+        list.add(Property(description = "Opcion 3", bedrooms = 2, bathrooms = 1,
+                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
+
+        list.add(Property(description = "Opcion 4", bedrooms = 2, bathrooms = 1,
+                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
+
         return list
     }
 }

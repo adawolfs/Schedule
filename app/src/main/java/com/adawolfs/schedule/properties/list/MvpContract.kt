@@ -12,7 +12,7 @@ import com.adawolfs.schedule.properties.list.adapters.PropertyListAdapter
 class MvpContract {
 
     interface View : BaseView {
-        fun fillRecyclerView(adapter : PropertyListAdapter)
+        fun fillRecyclerView(adapter : List<Property>)
     }
 
     interface Presenter: BasePresenter<View> {
