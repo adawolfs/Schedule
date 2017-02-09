@@ -9,19 +9,27 @@ class PropertyListInteractor : MvpContract.Interactor {
 
     override fun getItems() : List<Property> {
 
+
         val list : MutableList<Property> = mutableListOf()
-
-        list.add(Property(description = "Opcion 1", bedrooms = 2, bathrooms = 1,
-                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
-
-        list.add(Property(description = "Opcion 2", bedrooms = 2, bathrooms = 1,
-                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
-
-        list.add(Property(description = "Opcion 3", bedrooms = 2, bathrooms = 1,
-                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
-
-        list.add(Property(description = "Opcion 4", bedrooms = 2, bathrooms = 1,
-                latitude = 14.581851F, longitude = -90.495427F, address = "Guatemala"))
+        val p1 = Property(
+                title= "Opcion 1",
+                description = "Loremipsum kasdjfjñlkf sdafj kjsadf lskdjf lñksfj asdlfkjfk s dskjfajhfhlajskdfhuerhkjbnvc hvjh sfasdfiu kjewn rniusdpf af",
+                bedrooms = 2,
+                bathrooms = 3,
+                latitude = -90.4416055,
+                longitude = 80.0541655,
+                type = "C",
+                surface = 144.22F,
+                price = 8513.22,
+                currency = 1,
+                address = "Guatemala")
+        list.add(p1)
+        list.add(p1)
+        list.add(p1)
+        list.add(p1)
+        list.add(p1)
+        list.add(p1)
+        list.add(p1)
 
         return list
     }

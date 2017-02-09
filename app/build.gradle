@@ -71,6 +71,10 @@ dependencies {
 
     //Search
     compile 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    //FontAwesome icons
+    compile 'com.joanzapata.iconify:android-iconify-fontawesome:2.2.2' // (v4.5)
+    compile 'com.joanzapata.iconify:android-iconify:2.2.2'
 }
 repositories {
     mavenCentral()

@@ -1,0 +1,32 @@
+<resources>
+
+    <style name="Property_Title" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/property_title</item>
+    </style>
+
+    <style name="Property_Icon">
+        <item name="android:gravity">center</item>
+        <item name="android:shadowColor">#00000000</item>
+        <item name="android:shadowDx">13</item>
+        <item name="android:shadowDy">13</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">@color/property_text_color</item>
+    </style>
+
+    <style name="Property_Icon_Group">
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="Property_Price" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/property_text_color</item>
+
+    </style>
+</resources>

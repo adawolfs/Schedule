@@ -1,16 +1,16 @@
 package com.adawolfs.schedule.properties.list
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
-import android.view.View
 import com.adawolfs.schedule.R
 import com.adawolfs.schedule.mvp.BaseActivity
 import com.adawolfs.schedule.properties.containers.Property
 import com.adawolfs.schedule.properties.list.adapters.PropertyListAdapter
 import com.adawolfs.schedule.properties.list.dagger.Injector
+import com.adawolfs.schedule.properties.view.PropertyView
 import kotlinx.android.synthetic.main.activity_property_list.*
+import org.jetbrains.anko.startActivity
 import javax.inject.Inject
 
 
@@ -37,7 +37,9 @@ class PropertyList : BaseActivity(), MvpContract.View {
 
     override fun fillRecyclerView(items : List<Property>) {
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = PropertyListAdapter(items, this)
-        recyclerView.visibility = View.GONE
+        recyclerView.adapter = PropertyListAdapter(items, this){
+            startActivity<PropertyView>("PROPERTY" to it.tag)
+        }
+        //recyclerView.visibility = View.GONE
     }
 }

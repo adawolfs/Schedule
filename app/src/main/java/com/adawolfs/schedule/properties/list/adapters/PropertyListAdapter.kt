@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.card_item.view.*
 /**
  * Created by adawolfs on 2/1/17.
  */
-class PropertyListAdapter(val properties: List<Property>, val context: Context): RecyclerView.Adapter<PropertyListAdapter.ViewHolder>() {
+class PropertyListAdapter(val properties: List<Property>, val context: Context, val listener: (View) -> Unit): RecyclerView.Adapter<PropertyListAdapter.ViewHolder>() {
 
     companion object{
         val URL = "https://s-media-cache-ak0.pinimg.com/736x/73/de/32/73de32f9e5a0db66ec7805bb7cb3f807.jpg"
@@ -26,7 +26,7 @@ class PropertyListAdapter(val properties: List<Property>, val context: Context):
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindProperty(properties[position], context)
+        holder.bindProperty(properties[position], context, listener)
     }
 
     override fun getItemCount() = properties.size
@@ -35,10 +35,12 @@ class PropertyListAdapter(val properties: List<Property>, val context: Context):
     class ViewHolder(v: View): RecyclerView.ViewHolder(v) {
         var view: View = v
 
-        fun bindProperty(property: Property, context: Context){
+        fun bindProperty(property: Property, context: Context, listener: (View) -> Unit){
             with(property){
                 itemView.property_description.text = description
                 itemView.property_address.text = address
+                itemView.tag = this
+                itemView.setOnClickListener(listener)
                 Picasso.with(context).load(URL).into(itemView.property_photo)
             }
         }

@@ -1,13 +1,13 @@
-package com.adawolfs.schedule.properties.list.dagger
+package com.adawolfs.schedule.properties.view.dagger
 
-import com.adawolfs.schedule.properties.list.PropertyList
+import com.adawolfs.schedule.properties.view.PropertyView
 
 /**
- * Created by adawolfs on 2/1/17.
+ * Created by adawolfs on 9/02/17.
  */
 class Injector {
 
-    class inject(view: PropertyList) {
+    class inject(view: PropertyView) {
         private var component: Component? = null
         init{
             if (component == null) {

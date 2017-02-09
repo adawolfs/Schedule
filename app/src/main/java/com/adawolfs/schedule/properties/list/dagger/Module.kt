@@ -12,7 +12,7 @@ import javax.inject.Singleton
  * Created by adawolfs on 2/1/17.
  */
 @Module
-class Module(view: PropertyList) {
+class Module(view: PropertyList){
 
     private val context: Context
     private val propertyList: PropertyList
@@ -24,19 +24,19 @@ class Module(view: PropertyList) {
 
     @Provides
     @Singleton
-    internal fun provideInteractor(): PropertyListInteractor {
+    fun provideInteractor(): PropertyListInteractor {
         return PropertyListInteractor()
     }
 
     @Provides
     @Singleton
-    internal fun provideView(): PropertyList {
+    fun provideView(): PropertyList {
         return propertyList
     }
 
     @Provides
     @Singleton
-    internal fun providePresenter(interactor: PropertyListInteractor, view: PropertyList): PropertyListPresenter {
+    fun providePresenter(interactor: PropertyListInteractor, view: PropertyList): PropertyListPresenter {
         return PropertyListPresenter(interactor, view)
     }
 
