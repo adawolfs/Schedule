@@ -1,8 +1,7 @@
 package com.adawolfs.schedule.properties.list
 
 import com.adawolfs.schedule.mvp.BasePresenterImpl
-import com.adawolfs.schedule.properties.containers.Property
-import com.adawolfs.schedule.properties.list.adapters.PropertyListAdapter
+import com.adawolfs.schedule.properties.model.Property
 
 /**
  * Created by adawolfs on 2/1/17.

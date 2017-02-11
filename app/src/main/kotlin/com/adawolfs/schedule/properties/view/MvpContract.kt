@@ -1,10 +1,9 @@
-package com.adawolfs.schedule.properties.list
+package com.adawolfs.schedule.properties.view
 
 import com.adawolfs.schedule.mvp.BaseInteractor
 import com.adawolfs.schedule.mvp.BasePresenter
 import com.adawolfs.schedule.mvp.BaseView
-import com.adawolfs.schedule.properties.containers.Property
-import com.adawolfs.schedule.properties.list.adapters.PropertyListAdapter
+import com.adawolfs.schedule.properties.model.Property
 
 /**
  * Created by adawolfs on 2/1/17.
@@ -12,13 +11,12 @@ import com.adawolfs.schedule.properties.list.adapters.PropertyListAdapter
 class MvpContract {
 
     interface View : BaseView {
-        fun fillRecyclerView(adapter : List<Property>)
+        fun loadProperty(property: Property?)
     }
 
     interface Presenter: BasePresenter<View> {
-        fun loadItems()
-
-        fun setItems()
+        fun loadItem()
+        fun setItem()
     }
 
     interface Interactor: BaseInteractor {

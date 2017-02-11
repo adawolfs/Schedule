@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.adawolfs.schedule.R
-import com.adawolfs.schedule.properties.containers.Property
+import com.adawolfs.schedule.properties.model.Property
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.card_item.view.*
 

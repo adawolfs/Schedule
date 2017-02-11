@@ -23,4 +23,7 @@
     <color name="property_text_color">#aa000000</color>
 
     <color name="divider">#44000000</color>
+
+    <color name="category_background">#ef6c00</color>
+    <color name="category_text_color">#ffffff</color>
 </resources>

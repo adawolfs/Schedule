@@ -1,4 +1,4 @@
-package com.adawolfs.schedule.properties.containers
+package com.adawolfs.schedule.properties.model
 
 import java.io.Serializable
 
@@ -13,10 +13,11 @@ data class Property(val title: String,
                     val latitude: Double,
                     val longitude: Double,
                     val type: String,
+                    val category: String,
                     val surface: Float,
                     val price: Double,
                     val currency: Int,
-                    val address: String) : Serializable{
+                    val address: String) : Serializable {
 
     var formattedPrice = ""
     get() : String{

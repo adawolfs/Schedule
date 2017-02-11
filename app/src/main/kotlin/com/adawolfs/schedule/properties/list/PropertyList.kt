@@ -5,9 +5,9 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import com.adawolfs.schedule.R
 import com.adawolfs.schedule.mvp.BaseActivity
-import com.adawolfs.schedule.properties.containers.Property
 import com.adawolfs.schedule.properties.list.adapters.PropertyListAdapter
 import com.adawolfs.schedule.properties.list.dagger.Injector
+import com.adawolfs.schedule.properties.model.Property
 import com.adawolfs.schedule.properties.view.PropertyView
 import kotlinx.android.synthetic.main.activity_property_list.*
 import org.jetbrains.anko.startActivity

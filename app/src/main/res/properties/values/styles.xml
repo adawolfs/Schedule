@@ -1,8 +1,24 @@
 <resources>
 
-    <style name="Property_Title" parent="TextAppearance.AppCompat.Large">
+    <style name="Property_Price" parent="TextAppearance.AppCompat.Headline">
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">32sp</item>
         <item name="android:textColor">@color/property_title</item>
+    </style>
+
+    <style name="Property_Type" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/property_text_color</item>
+    </style>
+
+    <style name="Property_Category" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/category_background</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textColor">@color/category_text_color</item>
     </style>
 
     <style name="Property_Icon">
@@ -22,7 +38,7 @@
         <item name="android:paddingBottom">10dp</item>
     </style>
 
-    <style name="Property_Price" parent="TextAppearance.AppCompat.Large">
+    <style name="Property_Address" parent="TextAppearance.AppCompat.Large">
         <item name="android:textSize">20dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>

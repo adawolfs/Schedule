@@ -1,11 +1,14 @@
 package com.adawolfs.schedule.properties.list
 
-import com.adawolfs.schedule.properties.containers.Property
+import com.adawolfs.schedule.properties.model.Property
+import com.google.firebase.database.FirebaseDatabase
 
 /**
  * Created by adawolfs on 2/1/17.
  */
 class PropertyListInteractor : MvpContract.Interactor {
+
+    val database = FirebaseDatabase.getInstance().reference
 
     override fun getItems() : List<Property> {
 
@@ -18,7 +21,8 @@ class PropertyListInteractor : MvpContract.Interactor {
                 bathrooms = 3,
                 latitude = -90.4416055,
                 longitude = 80.0541655,
-                type = "C",
+                type = "Casa",
+                category = "Venta",
                 surface = 144.22F,
                 price = 8513.22,
                 currency = 1,
