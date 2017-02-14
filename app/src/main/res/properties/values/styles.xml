@@ -43,6 +43,11 @@
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/property_text_color</item>
+    </style>
 
+    <style name="Property_Description" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">18sp</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+        <item name="android:textColor">@color/property_text_color</item>
     </style>
 </resources>

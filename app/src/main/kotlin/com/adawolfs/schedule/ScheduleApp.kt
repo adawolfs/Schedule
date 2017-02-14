@@ -1,5 +1,6 @@
 package com.adawolfs.schedule
 import android.app.Application
+import butterknife.ButterKnife
 import com.adawolfs.schedule.controls.FontAwesomeModule
 import com.adawolfs.schedule.dagger.AppModule
 import com.adawolfs.schedule.dagger.DaggerNetComponent
@@ -21,6 +22,7 @@ class ScheduleApp : Application() {
                 .netModule(NetModule(""))
                 .build()
         Iconify.with(FontAwesomeModule())
+        ButterKnife.setDebug(BuildConfig.DEBUG)
 
     }
 }

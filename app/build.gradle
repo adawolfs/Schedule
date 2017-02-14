@@ -31,8 +31,8 @@ android {
             versionName '1.0'
             testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
         }
-
     }
+
     sourceSets {
         main {
             java.srcDirs += 'src/main/kotlin'
@@ -53,6 +53,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:design:25.1.1'
 
     //Dagger
     compile 'com.google.dagger:dagger:2.7'
@@ -65,7 +66,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
     //Anko
-    compile "org.jetbrains.anko:anko-common:$anko_version"
+    compile 'org.jetbrains.anko:anko-sdk15:0.9.1' // sdk19, sdk21, sdk23 are also available
+    compile 'org.jetbrains.anko:anko-support-v4:0.9.1' // In case you need support-v4 bindings
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.9.1' // For appcompat-v7 bindings
 
     //RecyclerView y CardView
     compile 'com.android.support:recyclerview-v7:25.1.1'
@@ -82,10 +85,16 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
 
     //Firebase
+    compile 'com.firebaseui:firebase-ui-database:1.0.0'
     compile 'com.google.firebase:firebase-database:10.0.1'
     compile 'com.google.firebase:firebase-auth:10.0.1'
+    
     //Search
     compile 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    //Butterknife
+    compile 'com.jakewharton:butterknife:8.5.1'
+    kapt 'com.jakewharton:butterknife-compiler:8.5.1'
 
     //FontAwesome icons
     // (v4.5)

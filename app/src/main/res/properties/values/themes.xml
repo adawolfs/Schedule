@@ -6,12 +6,30 @@
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/theme_primary</item>
         <item name="colorPrimaryDark">@color/theme_primary_dark</item>
-        <item name="colorAccent">@color/theme_icons</item>
+        <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/theme_background</item>
-        <item name="android:textColorPrimary">@color/theme_icons</item>
-        <item name="actionMenuTextColor">@color/theme_icons</item>
-        <item name="android:textColorSecondary">@color/theme_icons</item>
+        <item name="android:textColorPrimary">@color/theme_primary_text</item>
+        <item name="actionMenuTextColor">@color/theme_primary_text</item>
+        <item name="android:textColorSecondary">@color/theme_secondary_text</item>
         <item name="android:windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+        <item name="android:dialogTheme">@style/MyFragmentDialogTheme</item>
+        <item name="android:buttonStyle">@style/MyButtonStyle</item>
+    </style>
+    
+    <style name="MyFragmentDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:windowIsFloating">false</item>
+        <!-- No backgrounds, titles or window float
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        -->
+    </style>
+
+    <style name="MyButtonStyle" parent="android:style/Widget.Button">
+        <item name="android:background">@color/colorAccent</item>
+
     </style>
 </resources>

@@ -3,4 +3,20 @@
     <string name="search_title">Busqueda</string>
     <string name="search_hint">Busqueda</string>
     <string name="title_activity_property">Property</string>
+    
+    <array name="types">
+        <item>Casa</item>
+        <item>Apartamento</item>
+    </array>
+
+    <array name="categories">
+        <item>Renta</item>
+        <item>Venta</item>
+    </array>
+
+    <string name="dummy_address">Colonia Villa Sol, Zona 12 Guatemala</string>
+    <string name="dummy_price">$ 9999.99</string>
+    <string name="dummy_type">Casa</string>
+    <string name="dummy_category">VENTA</string>
+
 </resources>

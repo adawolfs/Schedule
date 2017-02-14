@@ -13,7 +13,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.adawolfs.schedule.R
 import com.adawolfs.schedule.mvp.BaseActivity
-import com.adawolfs.schedule.properties.list.adapters.PropertyListAdapter
+import com.adawolfs.schedule.properties.adapters.PropertyListAdapter
 import com.adawolfs.schedule.properties.model.Property
 import com.adawolfs.schedule.properties.view.dagger.Injector
 import com.adawolfs.schedule.utils.ImageUtils
@@ -51,8 +51,7 @@ class PropertyView : BaseActivity(), MvpContract.View {
         mShareActionProvider = ShareActionProvider(this)
         MenuItemCompat.setActionProvider(item, mShareActionProvider)
 
-        intent = sendBitmap(ImageUtils.getBitmapFromView(coordinator_container))
-        setShareIntent(intent)
+        setShareIntent(ImageUtils.getBitmapFromView(coordinator_container))
         return true
     }
 
@@ -63,6 +62,7 @@ class PropertyView : BaseActivity(), MvpContract.View {
     }
 
     override fun loadProperty(property: Property?) {
+        Picasso.with(this).load(PropertyListAdapter.URL).into(header)
         collapsing_toolbar.title = property?.title
         property_address.text = property?.address
         bath_number.text = property?.bathrooms.toString()
@@ -73,10 +73,9 @@ class PropertyView : BaseActivity(), MvpContract.View {
         category.text = property?.category
         price.text = property?.formattedPrice
         parking_number.text = 2.toString()
-        Picasso.with(this).load(PropertyListAdapter.URL).into(header)
     }
 
-    fun sendBitmap(bitmap : Bitmap) : Intent {
+    fun setShareIntent(bitmap : Bitmap) {
         val emailIntent = Intent(android.content.Intent.ACTION_SEND, Uri.parse("mailto:"))
         checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) {
             val pathofBmp = Images.Media.insertImage(contentResolver, bitmap, "title", null)
@@ -90,8 +89,8 @@ class PropertyView : BaseActivity(), MvpContract.View {
             emailIntent.type = "text/html"
             emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Alvin")
             emailIntent.putExtra(android.content.Intent.EXTRA_HTML_TEXT, Html.fromHtml("<font color='#ff123456'>TEST</font>"))
+            setShareIntent(emailIntent)
         }
-        return emailIntent
     }
 
 }

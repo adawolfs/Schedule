@@ -64,7 +64,7 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
                                             permissions: Array<String>, grantResults: IntArray) {
         // If request is cancelled, the result arrays are empty.
         if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            onRequestPermissionsResult?.invoke()
+            onRequestPermissionsResult.invoke()
         } else {
 
             // permission denied, boo! Disable the

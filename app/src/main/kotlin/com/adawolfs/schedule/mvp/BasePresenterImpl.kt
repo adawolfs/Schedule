@@ -6,8 +6,6 @@ package com.adawolfs.schedule.mvp
 
 open class BasePresenterImpl<V: BaseView>(var view: V?) : BasePresenter<V> {
 
-
-
     override fun deatachView() {
         view = null
     }

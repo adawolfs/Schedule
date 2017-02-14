@@ -10,8 +10,9 @@ class PropertyListInteractor : MvpContract.Interactor {
 
     val database = FirebaseDatabase.getInstance().reference
 
-    override fun getItems() : List<Property> {
-
+    override fun getItems() : Any {
+        return database.child("properties")
+        /*
 
         val list : MutableList<Property> = mutableListOf()
         val p1 = Property(
@@ -36,5 +37,11 @@ class PropertyListInteractor : MvpContract.Interactor {
         list.add(p1)
 
         return list
+        */
+    }
+
+    override fun writeNewPost(property : Property) {
+        val propertiesRef = database.child("properties").push()
+        propertiesRef.setValue(property)
     }
 }
